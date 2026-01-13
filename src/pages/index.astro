@@ -1,0 +1,820 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="後悔しない看護師転職｜ナース専科×レバウェル看護で理想の職場探し"
+  description="納得のいく職場選びを。業界最大手の「ナース専科」と職場のリアルがわかる「レバウェル看護」を徹底比較。あなたにぴったりの正社員・パート求人をプロが厳選紹介。"
+  bodyClass="pb-24 md:pb-0"
+>
+  <header
+    class="bg-white/95 backdrop-blur-md shadow-sm absolute md:fixed w-full z-50 top-0 left-0 h-14 md:h-16 flex items-center justify-between px-4 md:px-8 border-b border-sky-100 transition-all duration-300"
+  >
+    <div class="flex items-center gap-3 md:gap-4">
+      <div class="inline-block select-none">
+        <a href="/" class="block hover:opacity-80 transition-opacity">
+          <img
+            src="/assets/images/yakusupo_logo.svg"
+            alt="看護師Support.com"
+            class="h-6 md:h-8 w-auto"
+          />
+        </a>
+      </div>
+
+      <div
+        class="bg-sky-100 text-slate-600 text-[10px] md:text-xs font-medium px-2 py-0.5 rounded flex items-center whitespace-nowrap"
+      >
+        <i class="fas fa-bell text-slate-400 mr-1.5 text-[10px]"></i>
+        <span id="header-date-text">2026年1月更新</span>
+      </div>
+    </div>
+
+    <a
+      href="#register"
+      class="hidden md:inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-6 rounded-full transition shadow-md text-sm shiny-btn"
+    >
+      <i class="fas fa-search"></i>好条件の求人を探す（無料）
+    </a>
+  </header>
+
+  <section
+    class="pt-14 md:pt-16 pb-8 md:pb-16 bg-gradient-to-b from-sky-50 via-white to-white relative overflow-hidden"
+  >
+    <div class="relative z-20">
+      <div class="bg-sky-50 py-0.5 border-b border-sky-100">
+        <div class="flex justify-center items-center gap-2 text-[10px] text-slate-400">
+          <span class="border border-sky-300 px-1 rounded-[2px] bg-white text-slate-400 font-medium scale-90">PR</span>
+          <span>本ページはプロモーションが含まれています</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto text-center relative z-10 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 ease-out">
+      <div class="-mx-4 md:mx-0 relative mb-5 overflow-hidden shadow-soft">
+        <a href="#register">
+          <picture>
+            <source media="(min-width: 768px)" srcset="/assets/images/main.webp" type="image/webp" />
+            <source media="(min-width: 768px)" srcset="/assets/images/main.png" />
+            <source srcset="/assets/images/main_sp.webp" type="image/webp" />
+            <img
+              src="/assets/images/main_sp.png"
+              alt="笑顔で働く看護師"
+              class="w-full h-auto align-middle object-cover"
+              width="375"
+              height="500"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
+        </a>
+      </div>
+
+      <h1 class="text-slate-600 mt-6 mb-0 md:mb-8 leading-snug px-4">
+        <span class="font-bold text-xl md:text-xl">今の職場で、ずっと続けられますか？</span><br class="md:hidden" />
+        納得のいく転職を叶える看護師の正解は
+        <span class="text-sky-500 font-bold decoration-sky-500/30 decoration-4">“プロの活用”</span>でした
+      </h1>
+
+      <div class="mt-4 mb-6 px-4">
+        <p class="text-sm text-slate-700 leading-relaxed text-center">
+          <span class="inline-block bg-yellow-100 text-yellow-800 font-bold px-2 py-1 rounded text-xs mr-2">累計12万人以上が登録</span>
+          平均年収<span class="text-sky-600 font-bold text-lg">50万円アップ</span>を実現。<br />
+          <span class="text-red-600 font-bold">今月は非公開求人が特に多く</span>、好条件案件が見つかりやすいタイミングです。
+        </p>
+      </div>
+
+      <div class="hidden md:inline-flex flex-col items-center gap-2">
+        <span class="text-sky-500 font-bold text-sm animate-bounce">
+          ＼ 最短60秒で入力完了・完全無料 ／
+        </span>
+        <a
+          href="#register"
+          class="hidden md:inline-flex shiny-btn group items-center justify-center w-full md:w-auto min-w-[340px] bg-sky-500 hover:bg-sky-600 text-white text-xl font-bold py-4 px-8 rounded-full shadow-lg shadow-sky-500/30 transition transform hover:-translate-y-1"
+        >
+          自分にぴったりの求人を紹介してもらう
+          <i class="fas fa-chevron-right ml-3 group-hover:translate-x-1 transition"></i>
+        </a>
+        <p class="text-xs text-slate-500 mt-2 text-center">
+          ※登録後も無理な転職の勧誘は一切ありません。いつでも退会可能です。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="w-full">
+    <section class="w-full bg-sky-50 pt-16 md:pt-24 pb-24 md:pb-32 relative">
+      <div class="max-w-6xl mx-auto px-4 md:px-8 relative z-10 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 ease-out">
+        <div class="text-center mb-16">
+          <h2 class="text-2xl md:text-3xl font-bold leading-tight text-slate-900">
+            今の職場、こんな<span class="text-sky-500 relative inline-block">悩み</span><br class="md:hidden" />ありませんか？
+          </h2>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-10 md:gap-10">
+          <div class="w-full md:w-1/2 relative">
+            <div class="absolute -left-4 -bottom-4 w-full h-full bg-sky-200 rounded-[2rem] -z-10 hidden md:block transform -rotate-2"></div>
+            <div class="relative transform -rotate-2">
+              <img src="/assets/images/nayami.png" alt="悩む看護師" class="w-full aspect-[4/3] object-cover rounded-[2rem] shadow-xl" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2">
+            <h3 class="text-xl md:text-2xl font-bold text-slate-900 mb-10 text-center md:text-left">
+              現場の「我慢」が限界に近い方へ
+            </h3>
+
+            <ul class="space-y-10">
+              <li class="flex items-start group">
+                <div class="shrink-0 mr-3">
+                  <div class="w-10 h-10 flex items-center justify-center">
+                    <i class="fas fa-clock text-sky-500 text-3xl"></i>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-lg md:text-xl font-bold text-slate-900 mb-2 leading-tight">サービス残業・人手不足で体力が持たない</h4>
+                  <p class="text-slate-600 text-sm md:text-base leading-relaxed">「終わるまで帰れない」のが当たり前。自分の時間が削られ、心身ともに疲弊している。</p>
+                </div>
+              </li>
+
+              <li class="flex items-start group">
+                <div class="shrink-0 mr-3">
+                  <div class="w-10 h-10 flex items-center justify-center">
+                    <i class="fas fa-yen-sign text-sky-500 text-3xl"></i>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-lg md:text-xl font-bold text-slate-900 mb-2 leading-tight">業務の責任に対して給与が見合わない</h4>
+                  <p class="text-slate-600 text-sm md:text-base leading-relaxed">命を預かる重責と多忙な日々。それなのに昇給はわずかで、将来に不安を感じている。</p>
+                </div>
+              </li>
+
+              <li class="flex items-start group">
+                <div class="shrink-0 mr-3">
+                  <div class="w-10 h-10 flex items-center justify-center">
+                    <i class="fas fa-users-slash text-sky-500 text-3xl"></i>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-lg md:text-xl font-bold text-slate-900 mb-2 leading-tight">人間関係のストレスで心が休まらない</h4>
+                  <p class="text-slate-600 text-sm md:text-base leading-relaxed">独特な緊張感や派閥争い。看護に集中したいのに、周囲への気遣いだけで疲れてしまう。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="absolute left-0 right-0 bottom-0 flex justify-center translate-y-[99%] z-20"> <div class="w-0 h-0 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent border-t-[30px] border-t-sky-50"></div> </div>
+    </section>
+
+    <section class="w-full bg-white pt-24 md:pt-32 pb-16 md:pb-24 relative z-0">
+      <div class="max-w-6xl mx-auto px-4 md:px-8 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 ease-out">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+            <span class="text-sky-600">“エージェント活用”</span>という賢い選択
+          </h2>
+          <p class="text-slate-600 mt-4 text-sm md:text-base">自分一人で探すより、圧倒的に「理想」に近づけます</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-10">
+          <div class="w-full md:w-1/2 relative">
+            <div class="absolute -right-4 -bottom-4 w-full h-full bg-blue-100 rounded-[2rem] -z-10 hidden md:block transform rotate-2"></div>
+            <div class="relative transform rotate-2">
+              <img src="/assets/images/after-haken.png" alt="笑顔の看護師" class="w-full aspect-[4/3] object-cover rounded-[2rem] shadow-2xl shadow-yellow-100/50" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2">
+            <ul class="space-y-10">
+              <li class="flex items-start group">
+                <div class="shrink-0 mr-3">
+                  <div class="w-10 h-10 flex items-center justify-center">
+                    <i class="fas fa-shield-alt text-sky-600 text-3xl"></i>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-xl md:text-2xl font-bold text-slate-900 mb-2">高条件な「非公開求人」を優先紹介</h4>
+                  <p class="text-slate-600 text-sm md:text-base leading-relaxed">一般には公開されない年収500万超や土日休み等の優良案件を、登録者限定で紹介。</p>
+                </div>
+              </li>
+
+              <li class="flex items-start group">
+                <div class="shrink-0 mr-3">
+                  <div class="w-10 h-10 flex items-center justify-center">
+                    <i class="fas fa-search-plus text-sky-600 text-3xl"></i>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-xl md:text-2xl font-bold text-slate-900 mb-2">職場の「本当の内情」を事前リサーチ</h4>
+                  <p class="text-slate-600 text-sm md:text-base leading-relaxed">離職率、残業の実態、師長さんの人柄など、求人票には載らないリアルを共有。</p>
+                </div>
+              </li>
+
+              <li class="flex items-start group">
+                <div class="shrink-0 mr-3">
+                  <div class="w-10 h-10 flex items-center justify-center">
+                    <i class="fas fa-comments-dollar text-sky-600 text-3xl"></i>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-xl md:text-2xl font-bold text-slate-900 mb-2">給与や休日の「条件交渉」を代行</h4>
+                  <p class="text-slate-600 text-sm md:text-base leading-relaxed">自分では言いにくい「もう少し給与を…」という交渉も、プロが代わりに行います。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="py-16 md:py-24 px-4 bg-sky-50/50 border-sky-200">
+    <div class="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 ease-out">
+      <h2 class="text-center text-2xl md:text-3xl font-bold mb-8 md:mb-16">
+        「転職して本当によかった」<br />先輩ナースの声
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 pt-10 md:p-8 md:pt-12 rounded-2xl shadow-soft relative mt-6 md:mt-0 border border-sky-100">
+          <div class="absolute -top-6 md:-top-8 left-1/2 transform -translate-x-1/2">
+            <img src="/assets/images/user01.png" alt="User" loading="lazy" class="w-16 h-16 md:w-20 md:h-20 rounded-full border-4 border-white shadow-md object-cover" />
+          </div>
+          <div class="text-center">
+            <span class="inline-block bg-sky-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded mb-3">29歳・病棟からクリニック</span>
+            <span class="inline-block bg-sky-100 text-sky-600 text-[10px] font-bold px-2 py-1 rounded mb-3">年収アップ・残業なし</span>
+            <h3 class="font-bold text-slate-900 text-lg mb-5 leading-snug">
+              「夜勤なし」でも年収維持！<br />
+              <span class="text-sky-500">心にゆとりができました</span>
+            </h3>
+            <div class="bg-sky-50 rounded-lg p-4 mb-4 text-sm">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-slate-400 text-xs">前職</span>
+                <span class="text-slate-400 font-medium line-through">不規則なシフト・過労</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-sky-600 text-xs font-bold">現在</span>
+                <span class="text-slate-900 font-bold text-base">日勤のみ・土日祝休み</span>
+              </div>
+            </div>
+            <p class="text-sm text-sub-text text-left leading-relaxed">
+              以前は毎日ヘトヘトで、家に帰っても何もする気が起きませんでした。エージェントさんに交渉してもらい好条件のクリニックへ転職。今では生活リズムが整い、週末に趣味を楽しむ余裕ができました。月の手取りも5万円増え、貯金もできるように。
+            </p>
+          </div>
+        </div>
+
+        <div id="more-reviews" class="hidden md:contents">
+          <div class="bg-white p-6 pt-10 md:p-8 md:pt-12 rounded-2xl shadow-soft relative mt-10 md:mt-0 border border-sky-100 animate-fade-in">
+            <div class="absolute -top-6 md:-top-8 left-1/2 transform -translate-x-1/2">
+              <img src="/assets/images/user02.png" alt="User" loading="lazy" class="w-16 h-16 md:w-20 md:h-20 rounded-full border-4 border-white shadow-md object-cover" />
+            </div>
+            <div class="text-center">
+              <span class="inline-block bg-sky-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded mb-3">35歳・子育て中</span>
+              <span class="inline-block bg-sky-100 text-sky-600 text-[10px] font-bold px-2 py-1 rounded mb-3">時短勤務・理解ある職場</span>
+              <h3 class="font-bold text-slate-900 text-lg mb-5 leading-snug">
+                お迎えの焦りから解放！<br />
+                <span class="text-sky-500">子育てに理解ある環境</span>へ
+              </h3>
+              <div class="bg-sky-50 rounded-lg p-4 mb-4 text-sm">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-slate-400 text-xs">前職</span>
+                  <span class="text-slate-400 font-medium line-through">時短なのに残業あり</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sky-600 text-xs font-bold">現在</span>
+                  <span class="text-slate-900 font-bold text-base">残業ゼロ・理解ある同僚</span>
+                </div>
+              </div>
+              <p class="text-sm text-sub-text text-left leading-relaxed">
+                子どもが熱を出しても「お互い様だよ」と言ってもらえる職場。保育園のお迎えに間に合わず焦ることもなくなり、子どもとの時間が増えました。プロに相談して本当に正解でした。
+              </p>
+            </div>
+          </div>
+          <div class="bg-white p-6 pt-10 md:p-8 md:pt-12 rounded-2xl shadow-soft relative mt-10 md:mt-0 border border-sky-100 animate-fade-in">
+            <div class="absolute -top-6 md:-top-8 left-1/2 transform -translate-x-1/2">
+              <img src="/assets/images/user03.png" alt="User" loading="lazy" class="w-16 h-16 md:w-20 md:h-20 rounded-full border-4 border-white shadow-md object-cover" />
+            </div>
+            <div class="text-center">
+              <span class="inline-block bg-sky-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded mb-3">41歳・ブランク5年</span>
+              <span class="inline-block bg-sky-100 text-sky-600 text-[10px] font-bold px-2 py-1 rounded mb-3">復職支援・研修充実</span>
+              <h3 class="font-bold text-slate-900 text-lg mb-5 leading-snug">
+                ブランク5年から復帰！<br />
+                <span class="text-sky-500">研修が充実</span>した病院を紹介
+              </h3>
+              <div class="bg-sky-50 rounded-lg p-4 mb-4 text-sm">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-slate-400 text-xs">不安</span>
+                  <span class="text-slate-400 font-medium line-through">技術不足・最新知識</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sky-600 text-xs font-bold">現在</span>
+                  <span class="text-slate-900 font-bold text-base">教育担当つき・徐々に復帰</span>
+                </div>
+              </div>
+              <p class="text-sm text-sub-text text-left leading-relaxed">
+                いきなりのフル復職は怖かったのですが、研修制度が充実した病院を厳選してくれました。最新の医療知識も学び直せ、今は自信を持って働けています。年収も以前より80万円アップしました。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center md:hidden">
+        <button id="show-more-btn" onclick="toggleReviews()" class="bg-white border border-sky-300 text-slate-600 font-bold py-3 px-10 rounded-full shadow-sm hover:bg-sky-50 transition active:scale-95 text-sm flex items-center mx-auto gap-2">
+          <span>他の口コミも見る</span>
+          <i class="fas fa-chevron-down text-xs"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    function toggleReviews() {
+      const moreReviews = document.getElementById("more-reviews");
+      const btn = document.getElementById("show-more-btn");
+      moreReviews.classList.remove("hidden");
+      btn.style.display = "none";
+    }
+  </script>
+
+<section class="bg-sky-100 py-16 md:py-24 px-4 overflow-hidden">
+    <div class="max-w-7xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 ease-out">
+      <h2 class="text-center text-2xl md:text-3xl font-bold mb-3">例えば、こんな求人があります</h2>
+      <p class="text-center text-xs text-slate-600 mb-8 md:mb-12">※実際の求人状況はエージェントにご確認ください</p>
+
+      <div class="swiper mySwiper px-4">
+        <div class="swiper-wrapper !items-stretch">
+          <!-- 1つ目: 美容クリニック -->
+          <div class="swiper-slide !h-auto !flex">
+            <div class="w-full bg-white rounded-2xl shadow-md border-t-4 border-sky-600 relative flex flex-col overflow-hidden h-full">
+              <div class="h-32 bg-sky-200 w-full relative shrink-0">
+                <img src="/assets/images/ex01.png" alt="美容クリニック" class="w-full h-full object-cover" loading="lazy" />
+                <span class="absolute top-3 right-3 bg-sky-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-sm">駅チカ・高給与</span>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <div class="flex flex-wrap gap-2 mb-3 text-[10px] font-bold text-slate-600">
+                  <span class="bg-sky-100 px-2 py-1 rounded">美容クリニック</span>
+                  <span class="bg-sky-100 px-2 py-1 rounded">日勤のみ</span>
+                  <span class="bg-sky-100 px-2 py-1 rounded">残業ほぼなし</span>
+                </div>
+                <h3 class="font-bold text-base text-slate-900 mb-4 leading-snug">美容未経験歓迎！教育プログラム完備で安心スタート</h3>
+                <div class="flex flex-col gap-2 mt-auto pt-4 border-t border-sky-100 mb-4">
+                  <div class="flex items-center text-sm">
+                    <span class="w-12 font-bold text-slate-400 text-xs">月給</span><span class="font-bold text-sky-500 text-lg">380,000円〜</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <span class="w-12 font-bold text-slate-400 text-xs">休日</span><span class="font-bold text-slate-900">完全週休2日</span>
+                  </div>
+                </div>
+                <a href="/link/nursesenka" target="_blank" rel="nofollow noopener" class="block text-center text-xs text-sky-600 hover:text-sky-700 font-medium py-2 border border-sky-300 hover:border-sky-500 rounded-lg hover:bg-sky-50 transition">
+                  ナース専科で詳細を見る <i class="fas fa-chevron-right text-[10px] ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2つ目: 総合病院 -->
+          <div class="swiper-slide !h-auto !flex">
+            <div class="w-full bg-white rounded-2xl shadow-md border-t-4 border-sky-600 relative flex flex-col overflow-hidden h-full">
+              <div class="h-32 bg-sky-200 w-full relative shrink-0">
+                <img src="/assets/images/ex02.png" alt="総合病院" class="w-full h-full object-cover" loading="lazy" />
+                <span class="absolute top-3 right-3 bg-sky-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-sm">託児所あり</span>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <div class="flex flex-wrap gap-2 mb-3 text-[10px] font-bold text-slate-600">
+                  <span class="bg-sky-100 px-2 py-1 rounded">総合病院</span>
+                  <span class="bg-sky-100 px-2 py-1 rounded">土日休み可</span>
+                  <span class="bg-sky-100 px-2 py-1 rounded">ママナース活躍中</span>
+                </div>
+                <h3 class="font-bold text-base text-slate-900 mb-4 leading-snug">24時間託児所完備！復職後も安心して長く働ける環境</h3>
+                <div class="flex flex-col gap-2 mt-auto pt-4 border-t border-sky-100 mb-4">
+                  <div class="flex items-center text-sm">
+                    <span class="w-12 font-bold text-slate-400 text-xs">年収</span><span class="font-bold text-sky-500 text-lg">480万円〜</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <span class="w-12 font-bold text-slate-400 text-xs">時間</span><span class="font-bold text-slate-900">8:30〜17:30</span>
+                  </div>
+                </div>
+                <a href="/link/nursesenka" target="_blank" rel="nofollow noopener" class="block text-center text-xs text-sky-600 hover:text-sky-700 font-medium py-2 border border-sky-300 hover:border-sky-500 rounded-lg hover:bg-sky-50 transition">
+                  ナース専科で詳細を見る <i class="fas fa-chevron-right text-[10px] ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3つ目: 非公開求人 -->
+          <div class="swiper-slide !h-auto !flex">
+            <div class="w-full bg-gradient-to-br from-sky-50 to-sky-100 rounded-2xl shadow-inner border border-sky-200 relative flex flex-col overflow-hidden h-full">
+              <div class="w-full h-32 bg-sky-200/50 flex items-center justify-center relative shrink-0">
+                <span class="absolute top-0 left-0 bg-slate-600 text-white text-[10px] font-bold px-3 py-1 rounded-br-lg">非公開求人</span>
+                <i class="fas fa-lock text-4xl text-slate-300"></i>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <div class="flex flex-col items-center justify-center flex-grow">
+                  <h3 class="font-bold text-slate-600 text-sm mb-1">登録者限定</h3>
+                  <p class="text-xs text-slate-400 mb-4">人気・好条件案件は非公開です</p>
+                  <div class="w-full bg-white text-center rounded-lg p-2 shadow-sm border border-sky-100 mb-4">
+                    <div class="text-xs text-slate-400 font-bold mb-1">想定年収</div>
+                    <div class="text-xl font-bold text-sky-500">550万円〜</div>
+                  </div>
+                </div>
+                <a href="/link/nursesenka" target="_blank" rel="nofollow noopener" class="block text-center text-xs text-sky-600 hover:text-sky-700 font-medium py-2 border border-sky-300 hover:border-sky-500 rounded-lg hover:bg-sky-50 transition">
+                  ナース専科で詳細を見る <i class="fas fa-chevron-right text-[10px] ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4つ目: 内科クリニック -->
+          <div class="swiper-slide !h-auto !flex">
+            <div class="w-full bg-white rounded-2xl shadow-md border-t-4 border-sky-600 relative flex flex-col overflow-hidden h-full">
+              <div class="h-32 bg-sky-200 w-full relative shrink-0">
+                <img src="/assets/images/ex04.png" alt="クリニック" class="w-full h-full object-cover" loading="lazy" />
+                <span class="absolute top-3 right-3 bg-sky-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-sm">16時退勤</span>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <div class="flex flex-wrap gap-2 mb-3 text-[10px] font-bold text-slate-600">
+                  <span class="bg-sky-100 px-2 py-1 rounded">内科クリニック</span>
+                  <span class="bg-sky-100 px-2 py-1 rounded">駅近</span>
+                  <span class="bg-sky-100 px-2 py-1 rounded">日勤のみ</span>
+                </div>
+                <h3 class="font-bold text-base text-slate-900 mb-4 leading-snug">駅徒歩3分！16時退勤でプライベート充実</h3>
+                <div class="flex flex-col gap-2 mt-auto pt-4 border-t border-sky-100 mb-4">
+                  <div class="flex items-center text-sm">
+                    <span class="w-12 font-bold text-slate-400 text-xs">月給</span><span class="font-bold text-sky-500 text-lg">320,000円〜</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <span class="w-12 font-bold text-slate-400 text-xs">時間</span><span class="font-bold text-slate-900">9:00〜16:00</span>
+                  </div>
+                </div>
+                <a href="/link/nursesenka" target="_blank" rel="nofollow noopener" class="block text-center text-xs text-sky-600 hover:text-sky-700 font-medium py-2 border border-sky-300 hover:border-sky-500 rounded-lg hover:bg-sky-50 transition">
+                  ナース専科で詳細を見る <i class="fas fa-chevron-right text-[10px] ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5つ目: 訪問看護 -->
+          <div class="swiper-slide !h-auto !flex">
+            <div class="w-full bg-white rounded-2xl shadow-md border-t-4 border-sky-600 relative flex flex-col overflow-hidden h-full">
+              <div class="h-32 bg-sky-200 w-full relative shrink-0">
+                <img src="/assets/images/ex03.png" alt="訪問看護" class="w-full h-full object-cover" loading="lazy" />
+                <span class="absolute top-3 right-3 bg-yellow-400 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-sm">高給与</span>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <div class="flex flex-wrap gap-2 mb-3 text-[10px] font-bold text-slate-600">
+                  <span class="bg-sky-100 px-2 py-1 rounded">訪問看護</span>
+                  <span class="bg-sky-100 px-2 py-1 rounded">土日休み</span>
+                  <span class="bg-sky-100 px-2 py-1 rounded">オンコール無</span>
+                </div>
+                <h3 class="font-bold text-base text-slate-900 mb-4 leading-snug">オンコールなし！働きやすい訪問看護ステーション</h3>
+                <div class="flex flex-col gap-2 mt-auto pt-4 border-t border-sky-100 mb-4">
+                  <div class="flex items-center text-sm">
+                    <span class="w-12 font-bold text-slate-400 text-xs">年収</span><span class="font-bold text-sky-500 text-lg">520万円〜</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <span class="w-12 font-bold text-slate-400 text-xs">時間</span><span class="font-bold text-slate-900">9:00〜18:00</span>
+                  </div>
+                </div>
+                <a href="/link/nursesenka" target="_blank" rel="nofollow noopener" class="block text-center text-xs text-sky-600 hover:text-sky-700 font-medium py-2 border border-sky-300 hover:border-sky-500 rounded-lg hover:bg-sky-50 transition">
+                  ナース専科で詳細を見る <i class="fas fa-chevron-right text-[10px] ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6つ目: 有料老人ホーム -->
+          <div class="swiper-slide !h-auto !flex">
+            <div class="w-full bg-white rounded-2xl shadow-md border-t-4 border-sky-600 relative flex flex-col overflow-hidden h-full">
+              <div class="h-32 bg-sky-200 w-full relative shrink-0">
+                <img src="/assets/images/ex05.png" alt="老人ホーム" class="w-full h-full object-cover" loading="lazy" />
+                <span class="absolute top-3 right-3 bg-sky-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-sm">ブランクOK</span>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <div class="flex flex-wrap gap-2 mb-3 text-[10px] font-bold text-slate-600">
+                  <span class="bg-sky-100 px-2 py-1 rounded">有料老人ホーム</span>
+                  <span class="bg-sky-100 px-2 py-1 rounded">夜勤なし可</span>
+                  <span class="bg-sky-100 px-2 py-1 rounded">研修充実</span>
+                </div>
+                <h3 class="font-bold text-base text-slate-900 mb-4 leading-snug">ブランク5年でも安心！丁寧な研修制度あり</h3>
+                <div class="flex flex-col gap-2 mt-auto pt-4 border-t border-sky-100 mb-4">
+                  <div class="flex items-center text-sm">
+                    <span class="w-12 font-bold text-slate-400 text-xs">月給</span><span class="font-bold text-sky-500 text-lg">300,000円〜</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <span class="w-12 font-bold text-slate-400 text-xs">時間</span><span class="font-bold text-slate-900">8:00〜17:00</span>
+                  </div>
+                </div>
+                <a href="/link/nursesenka" target="_blank" rel="nofollow noopener" class="block text-center text-xs text-sky-600 hover:text-sky-700 font-medium py-2 border border-sky-300 hover:border-sky-500 rounded-lg hover:bg-sky-50 transition">
+                  ナース専科で詳細を見る <i class="fas fa-chevron-right text-[10px] ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination !relative !bottom-auto !mt-6"></div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="bg-white py-10 md:py-24 px-0 md:px-4">
+  <div class="w-full md:max-w-5xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 ease-out">
+    
+    <div class="flex flex-row items-center justify-center gap-3 mb-8 px-4">
+      <h2 class="text-center text-xl md:text-3xl font-bold text-slate-800 leading-tight">
+        私にはどっちが合う？<br />
+        <span class="text-sky-600">2大エージェント</span>徹底比較
+      </h2>
+      <img 
+        src="/assets/images/au-bear.png" 
+        alt="案内するナースクマ" 
+        class="w-12 md:w-20 h-auto object-contain"
+      />
+    </div>
+
+    <div class="relative w-full">
+      <table class="w-full border-collapse text-center table-fixed border-y border-slate-100 md:rounded-xl md:overflow-hidden md:shadow-lg md:border">
+        <thead>
+          <tr class="bg-white">
+            <th class="w-[20%] bg-slate-50 py-4 px-1 border-b border-slate-200 text-slate-700 font-bold text-xs md:text-sm align-middle">
+              比較項目
+            </th>
+            <th class="w-[40%] py-4 px-1 border-b-2 border-sky-500 relative border-t-4 md:border-t-8 border-sky-500 border-l border-slate-100">
+              <div class="text-sky-500 text-[9px] md:text-xs font-bold mb-2 tracking-tighter uppercase">
+                <i class="fas fa-crown mr-0.5"></i>求人数・安心感
+              </div>
+              <div class="h-8 md:h-12 flex items-center justify-center">
+                <img src="/assets/images/logo_nursesenka.webp" alt="ナース専科" class="max-h-full w-auto object-contain" />
+              </div>
+            </th>
+            <th class="w-[40%] py-4 px-1 border-b-2 border-[var(--color-secondary)] relative border-t-4 md:border-t-8 border-[var(--color-secondary)] border-l border-slate-100">
+              <div class="text-[var(--color-secondary)] text-[9px] md:text-xs font-bold mb-2 tracking-tighter uppercase">
+                <i class="fas fa-shield-alt mr-0.5"></i>職場のリアル
+              </div>
+              <div class="h-8 md:h-12 flex items-center justify-center">
+                <img src="/assets/images/logo_reverage.svg" alt="レバウェル看護" class="max-h-full w-auto object-contain" />
+              </div>
+            </th>
+          </tr>
+        </thead>
+        
+        <tbody class="bg-white divide-y divide-slate-100">
+          <tr>
+            <td class="bg-slate-50 font-bold text-slate-700 text-xs md:text-sm align-middle">最大の強み</td>
+            <td class="py-5 px-1 border-l border-slate-50">
+              <span class="text-sky-600 font-bold text-xs md:text-lg block mb-1">圧倒的な求人数</span>
+              <span class="text-[10px] md:text-sm text-slate-500 block leading-tight">全国10万件以上の施設</span>
+            </td>
+            <td class="py-5 px-1 border-l border-slate-100">
+              <span class="text-[var(--color-secondary)] font-bold text-xs md:text-lg block mb-1">職場の内情報</span>
+              <span class="text-[10px] md:text-sm text-slate-500 block leading-tight">働いたナースの生の声</span>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="bg-slate-50 font-bold text-slate-700 text-xs md:text-sm align-middle">サポート</td>
+            <td class="py-5 px-1 border-l border-slate-50">
+              <span class="text-slate-800 font-bold text-xs md:text-lg block mb-1">交渉力に定評</span>
+              <p class="text-[10px] md:text-sm text-slate-500 leading-tight">給与・条件交渉もお任せ</p>
+            </td>
+            <td class="py-5 px-1 border-l border-slate-100">
+              <span class="text-slate-800 font-bold text-xs md:text-lg block mb-1">徹底ヒアリング</span>
+              <p class="text-[10px] md:text-sm text-slate-500 leading-tight">ミスマッチを最小化</p>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="bg-slate-50 font-bold text-slate-700 text-xs md:text-sm align-middle">こんな人に</td>
+            <td class="py-5 px-1 border-l border-slate-50">
+              <div class="inline-block bg-sky-500 text-white text-[9px] md:text-xs px-2 py-0.5 rounded-full font-bold mb-1.5">早く確実に</div>
+              <p class="text-[10px] md:text-sm text-slate-500 leading-tight">多くの選択肢から<br/>選びたい方</p>
+            </td>
+            <td class="py-5 px-1 border-l border-slate-100">
+              <div class="inline-block bg-[var(--color-secondary)] text-white text-[9px] md:text-xs px-2 py-0.5 rounded-full font-bold mb-1.5">納得感重視</div>
+              <p class="text-[10px] md:text-sm text-slate-500 leading-tight">現場の雰囲気を<br/>重視したい方</p>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="bg-slate-50 font-bold text-slate-700 text-[10px] md:text-xs align-middle">利用料</td>
+            <td class="p-2 md:p-5 border-l border-slate-50">
+              <a href="/link/nursesenka" target="_blank" rel="nofollow" class="block bg-sky-500 hover:bg-sky-600 text-white text-xs md:text-sm font-bold py-3 rounded-lg shadow-md transition shiny-btn">
+                ナース専科公式サイトへ（無料）
+              </a>
+              <p class="text-[8px] md:text-[10px] text-slate-400 mt-1.5"></p>
+            </td>
+            <td class="p-2 md:p-5 border-l border-slate-100">
+              <a href="/link/levwell" target="_blank" rel="nofollow" class="block bg-[var(--color-secondary)] hover:bg-[var(--color-secondary-hover)] text-white text-xs md:text-sm font-bold py-3 rounded-lg shadow-md transition shiny-btn">
+                レバウェル看護公式サイトへ（無料）
+              </a>
+              <p class="text-[8px] md:text-[10px] text-slate-400 mt-1.5"></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+  <section id="register" class="py-16 md:py-24 px-4 text-white text-center md:mb-0 relative overflow-hidden" style="background: linear-gradient(to bottom right, #32aeed, #0ea5e9);">
+    <div class="absolute top-0 left-0 w-full h-full opacity-10">
+      <i class="fas fa-pills absolute top-10 left-10 text-8xl transform rotate-12"></i>
+      <i class="fas fa-user-nurse absolute bottom-10 right-10 text-9xl transform -rotate-12"></i>
+    </div>
+
+    <div class="max-w-5xl mx-auto relative z-10 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 ease-out">
+      <span class="bg-yellow-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block shadow-sm">理想の職場を見逃さない</span>
+      <h2 class="text-2xl md:text-4xl font-bold mb-4 drop-shadow-md">
+        <span class="text-yellow-300">2社登録</span>で、好条件求人を逃さない
+      </h2>
+      <p class="mb-10 font-bold opacity-90 text-base md:text-lg leading-relaxed">
+        どちらか1社でもOK。両方チェックすれば、より理想に近い職場が見つかります。
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl p-6 md:p-8 text-slate-900 shadow-2xl relative transform transition duration-300 hover:-translate-y-2 border-4 border-transparent hover:border-sky-500">
+          <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-sky-600 text-white font-bold px-6 py-2 rounded-full shadow-lg text-sm whitespace-nowrap">
+            <i class="fas fa-crown mr-2"></i>まずはここ！定番の1社
+          </div>
+          <div class="h-80 mb-6 flex items-center justify-center">
+            <a id="img-recco-pharmate" href="/link/nursesenka" target="_blank" rel="nofollow noopener" class="block h-full hover:opacity-80 transition">
+              <img src="/assets/images/nursesenka.png" alt="ナース専科" class="h-full w-auto object-contain" />
+            </a>
+          </div>
+          <div class="text-center mb-6">
+            <a id="link-recco-pharmate" href="/link/nursesenka" target="_blank" rel="nofollow noopener" class="text-xl font-bold text-slate-900 hover:text-sky-500 hover:underline transition">
+              ナース専科（ナース人材バンク）
+              <i class="fas fa-angle-right text-sm ml-1 text-slate-400"></i>
+            </a>
+          </div>
+          <ul class="text-left text-sm space-y-4 mb-8 bg-sky-50 p-6 rounded-2xl">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-sky-500 mr-3 text-lg"></i>
+              <div class="leading-tight"><span class="font-bold">看護師支持率No.1（登録者8万人突破）</span></div>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-sky-500 mr-3 text-lg"></i>地域密着！<span class="font-bold text-sky-500">近場の好条件求人</span>に強い
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-sky-500 mr-3 text-lg"></i><span class="font-bold">年収アップ（平均50万円）・休日増加</span>の交渉も徹底
+            </li>
+          </ul>
+          <a id="btn-recco-pharmate" href="/link/nursesenka" target="_blank" rel="nofollow noopener" class="shiny-btn block w-full bg-sky-600 hover:bg-sky-600 text-white text-xl font-bold py-5 rounded-full shadow-lg shadow-sky-500/30 transition flex flex-col items-center justify-center">
+            <span class="text-[10px] block opacity-90 font-medium mb-1">カンタン60秒で登録完了！</span>
+            <span class="flex items-center gap-2">
+              求人紹介を依頼する（完全無料）
+              <i class="fas fa-external-link-alt text-base"></i>
+            </span>
+          </a>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 md:p-8 text-slate-900 shadow-2xl relative transform transition duration-300 hover:-translate-y-2 border-4 border-transparent hover:border-[var(--color-secondary)]">
+  <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[var(--color-secondary)] text-white font-bold px-6 py-2 rounded-full shadow-lg text-sm whitespace-nowrap">
+    <i class="fas fa-shield-alt mr-2"></i>職場の内情を知るならここ
+  </div>
+
+  <div class="h-80 mb-6 flex items-center justify-center">
+    <a id="img-recco-pharmastaff" href="/link/levwell" target="_blank" rel="nofollow noopener" class="block h-full hover:opacity-80 transition">
+      <img src="/assets/images/levwell.png" alt="レバウェル看護" class="h-full w-auto object-contain" />
+    </a>
+  </div>
+
+  <div class="text-center mb-6">
+    <a id="link-recco-pharmastaff" href="/link/levwell" target="_blank" rel="nofollow noopener" class="text-xl font-bold text-slate-900 hover:text-[var(--color-secondary)] hover:underline transition">
+      レバウェル看護
+      <i class="fas fa-angle-right text-sm ml-1 text-slate-400"></i>
+    </a>
+  </div>
+
+  <ul class="text-left text-sm space-y-4 mb-8 bg-sky-50 p-6 rounded-2xl">
+    <li class="flex items-center">
+      <i class="fas fa-check-circle text-[var(--color-secondary)] mr-3 text-lg"></i>
+      実際の<span class="font-bold">現場の口コミ情報</span>が豊富
+    </li>
+    <li class="flex items-center">
+      <i class="fas fa-check-circle text-[var(--color-secondary)] mr-3 text-lg"></i>
+      <span class="font-bold">人間関係や離職率</span>も包み隠さず共有
+    </li>
+    <li class="flex items-center">
+      <i class="fas fa-check-circle text-[var(--color-secondary)] mr-3 text-lg mt-1"></i>
+      <div class="leading-tight"><span class="font-bold">LINEで気軽に相談</span>できる手厚いサポート</div>
+    </li>
+  </ul>
+
+  <a id="btn-recco-pharmastaff" href="/link/levwell" target="_blank" rel="nofollow noopener" class="shiny-btn block w-full bg-[var(--color-secondary)] hover:bg-[var(--color-secondary-hover)] text-white text-xl font-bold py-5 rounded-full shadow-lg shadow-[var(--color-secondary)]/30 transition flex flex-col items-center justify-center leading-tight">
+    <span class="text-[10px] block opacity-95 font-medium mb-1">スマホから手軽に登録！</span>
+    <span class="flex items-center gap-2">
+      職場の内情を見る（完全無料）
+      <i class="fas fa-external-link-alt text-base"></i>
+    </span>
+  </a>
+</div>
+    </div>
+      <p class="text-xs text-sky-100 mt-10 opacity-80 leading-relaxed text-center">
+        ※登録・利用はすべて完全無料。個人情報は厳重に管理され、無理な転職の勧誘は一切ありません。<br />
+        理想の職場を逃さないために、両方チェックすることをお勧めします（どちらか片方だけでもOK）。<br />
+        必ず転職する必要はありませんので、まずは情報収集から始めてみてください。
+      </p>
+  </section>
+
+  <div class="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-sky-200 px-3 pt-3 md:hidden z-50 shadow-[0_-4px_20px_-5px_rgba(0,0,0,0.1)]" style="padding-bottom: max(12px, env(safe-area-inset-bottom))">
+    <div class="flex gap-2 max-w-sm mx-auto items-end">
+      <a id="btn-float-pharmate" href="/link/levwell" rel="nofollow" target="_blank" class="flex-1 bg-sky-500 hover:bg-sky-500 text-white text-center font-bold py-3 rounded-lg shadow-sm flex flex-col justify-center items-center leading-tight transition relative opacity-90">
+        <span class="text-[10px] opacity-90 font-normal">職場のリアルなら</span>
+        <span class="text-sm">レバウェル</span>
+      </a>
+      <div class="flex-[1.6] relative">
+        <a id="btn-float-pharmastaff" href="/link/nursesenka" rel="nofollow" target="_blank" class="block w-full bg-orange-500 hover:bg-orange-600 text-center text-white font-bold py-4 rounded-xl shadow-[0_10px_15px_-3px_rgba(249,115,22,0.3)] flex flex-col justify-center items-center leading-tight shiny-btn active:scale-95 transition relative overflow-visible">
+          <span class="text-[10px] block mb-0.5 text-yellow-100 font-bold tracking-wide">
+            <i class="fas fa-pen mr-1"></i>最短60秒で入力完了! 登録無料
+          </span>
+          <span class="text-base">ナース専科で求人を探す</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", function () {
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        speed: 600,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 32,
+            centeredSlides: false,
+          },
+        },
+      });
+
+      const today = new Date();
+      const dateText = document.getElementById("header-date-text");
+      if (dateText) {
+        dateText.innerHTML = `${today.getFullYear()}年${today.getMonth() + 1}月更新`;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove("opacity-0", "translate-y-8");
+              entry.target.classList.add("opacity-100", "translate-y-0");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+        observer.observe(el);
+      });
+    });
+
+    function switchTab(agent) {
+      const contentPharmate = document.getElementById("content-pharmate");
+      const contentPharmastaff = document.getElementById("content-pharmastaff");
+      const btnPharmate = document.getElementById("btn-pharmate");
+      const btnPharmastaff = document.getElementById("btn-pharmastaff");
+
+      const activeClasses = ["bg-white", "text-sky-500", "border-t-4", "border-sky-500", "py-4", "-mb-px", "z-30", "relative", "rounded-t-xl", "shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]"];
+      const inactiveClasses = ["bg-sky-200", "text-slate-600", "border-t-4", "border-transparent", "py-3", "z-10", "relative", "rounded-t-xl"];
+
+      const resetStyles = (btn) => {
+        btn.classList.remove(...activeClasses);
+        btn.classList.remove(...inactiveClasses);
+        btn.classList.remove("text-orange-500", "border-orange-500");
+      };
+
+      if (agent === "pharmate") {
+        contentPharmate.classList.remove("hidden");
+        contentPharmastaff.classList.add("hidden");
+        resetStyles(btnPharmate);
+        btnPharmate.classList.add(...activeClasses);
+        resetStyles(btnPharmastaff);
+        btnPharmastaff.classList.add(...inactiveClasses);
+      } else {
+        contentPharmate.classList.add("hidden");
+        contentPharmastaff.classList.remove("hidden");
+        resetStyles(btnPharmastaff);
+        btnPharmastaff.classList.add("bg-white", "text-[var(--color-secondary)]", "border-t-4", "border-[var(--color-secondary)]", "py-4", "-mb-px", "z-30", "relative", "rounded-t-xl", "shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]");
+        resetStyles(btnPharmate);
+        btnPharmate.classList.add(...inactiveClasses);
+      }
+    }
+  </script>
+</Layout>

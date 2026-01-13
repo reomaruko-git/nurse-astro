@@ -1,0 +1,111 @@
+---
+const {
+  title,
+  description = "看護師のための新しい働き方支援サービス。ママ看護師の復職や理想の職場探しをプロがサポートします。",
+  bodyClass = "",
+} = Astro.props;
+// 正規化されたURL（ nurse-support.com へ変更しつつロジック保持 ）
+const currentUrl = new URL(Astro.url.pathname, "https://nurse-support.com");
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="ja" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="看護師Support.com" />
+    <meta property="og:image" content="https://nurse-support.com/assets/images/main.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    {import.meta.env.PROD && (
+      <script is:inline>
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-TBTHH8XN");
+      </script>
+    )}
+    <link rel="canonical" href={currentUrl.href} />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+
+  <body class={"bg-[#F0F9FF] font-sans text-[#334155] " + bodyClass}>
+    {import.meta.env.PROD && (
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBTHH8XN" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+    )}
+    <slot />
+
+    <button
+      id="scroll-to-top"
+      aria-label="ページトップへ戻る"
+      class="fixed bottom-36 right-4 md:bottom-8 z-40 bg-white/80 backdrop-blur-sm border border-[#FDF0E9] text-[#0EA5E9] rounded-full w-12 h-12 shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 translate-y-10 invisible hover:bg-white hover:scale-110 active:scale-95"
+    >
+      <i class="fas fa-chevron-up text-lg"></i>
+    </button>
+
+    <footer class="bg-[#1e3a5f] text-[#E0F2FE] py-12 px-4 pb-14 md:pb-12 mt-auto">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+        <div>
+          <a href="/" class="block hover:opacity-80 transition-opacity">
+            <img src="/assets/images/yakusupo_logo_wh.svg" alt="看護師Support.com" class="h-6 md:h-8 w-auto" />
+          </a>
+          <p class="text-xs mt-2 opacity-80">看護師のための新しい働き方支援サービス</p>
+        </div>
+        <div class="text-center md:text-right">
+          <div class="mt-4 space-x-6 text-xs font-medium">
+            <a href="/" class="hover:text-white transition">ホーム</a>
+            <a href="/privacy" class="hover:text-white transition">プライバシーポリシー</a>
+            <a href="/company" class="hover:text-white transition">運営者情報</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-[10px] text-[#94a3b8] mt-12 border-t border-[#334155] pt-8">
+        &copy; 2026 看護師Support.com All Rights Reserved.
+      </div>
+    </footer>
+
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        // GCLID（計測ID）引き継ぎロジック
+        const params = window.location.search;
+        if (params) {
+          const links = document.querySelectorAll('a[href^="/link/"]');
+          links.forEach((link) => {
+            const separator = link.href.includes("?") ? "&" : "?";
+            link.href += separator + params.slice(1);
+          });
+        }
+        // トップへ戻るボタンの既存機能
+        const scrollTopBtn = document.getElementById("scroll-to-top");
+        if (scrollTopBtn) {
+          window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+              scrollTopBtn.classList.remove("opacity-0", "translate-y-10", "invisible");
+              scrollTopBtn.classList.add("opacity-100", "translate-y-0", "visible");
+            } else {
+              scrollTopBtn.classList.remove("opacity-100", "translate-y-0", "visible");
+              scrollTopBtn.classList.add("opacity-0", "translate-y-10", "invisible");
+            }
+          });
+          scrollTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

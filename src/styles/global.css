@@ -1,0 +1,215 @@
+/* ★ これがTailwind v4を読み込むための必須行です */
+@import "tailwindcss";
+
+/* -------------------------------------------------- */
+/* 1. テーマ設定 (@theme)                            */
+/* ここに変数を定義すると、Tailwindクラスとして使えます      */
+/* -------------------------------------------------- */
+@theme {
+  /* ▼ カスタムカラー - 水色ベースの爽やかな配色 */
+/* メインの水色 */
+  --color-primary: #0ea5e9;
+  --color-primary-dark: #0284c7;
+  
+  /* ピンク系（旧レバウェルカラー箇所） */
+  --color-secondary: #EE849D;
+  --color-secondary-hover: #e36b89;
+  
+  /* その他、既存のオレンジなども汎用名に変更 */
+  --color-accent-orange: #f97316;
+  --color-accent-orange-hover: #ea580c;
+  
+  --color-text: #334155;
+  --color-sub-text: #64748b;
+  --color-warm-bg: #f0f9ff;
+  --color-gradient-start: #5dc8ff;
+  --color-gradient-end: #0b8fcb;
+
+  /* ▼ フォント設定 */
+  --font-sans: "LINE Seed JP", "Zen Kaku Gothic New", sans-serif;
+  --font-rounded: "M PLUS Rounded 1c", sans-serif;
+
+  /* ▼ 影の設定 */
+  --shadow-soft: 0 10px 40px -10px rgba(14, 165, 233, 0.08);
+  --shadow-card:
+    0 4px 6px -1px rgba(14, 165, 233, 0.05), 0 2px 4px -1px rgba(14, 165, 233, 0.03);
+}
+
+/* -------------------------------------------------- */
+/* 2. ベーススタイル (@layer base)                    */
+/* フォント定義や body の基本設定                      */
+/* -------------------------------------------------- */
+@layer base {
+  @font-face {
+    font-family: "LINE Seed JP";
+    src: url("/assets/fonts/LINESeedJP_OTF_Rg.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "LINE Seed JP";
+    src: url("/assets/fonts/LINESeedJP_OTF_Bd.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "LINE Seed JP";
+    src: url("/assets/fonts/LINESeedJP_OTF_Eb.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    letter-spacing: 0.03em;
+  }
+}
+
+/* -------------------------------------------------- */
+/* 3. コンポーネント・ユーティリティ (@layer components) */
+/* ボタンやSwiperなどのカスタムCSS                      */
+/* -------------------------------------------------- */
+@layer components {
+  /* shiny-btn */
+  .shiny-btn {
+    position: relative;
+    overflow: hidden;
+  }
+  .shiny-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    transform: skewX(-25deg);
+    animation: shine 8s infinite;
+  }
+  @keyframes shine {
+    0% {
+      left: -100%;
+    }
+    10% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  .check-list-item i {
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+  }
+  .gradient-bg {
+    background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%);
+  }
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .policy-content h2 {
+    font-weight: 600;
+    color: #475569;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e0f2fe;
+  }
+  .policy-content p {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #475569;
+  }
+  .policy-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #475569;
+  }
+  .policy-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Swiper カスタマイズ - 水色ベース */
+  .mySwiper .swiper-button-next:after,
+  .mySwiper .swiper-button-prev:after {
+    font-size: 16px;
+    color: #0ea5e9;
+    font-weight: bold;
+  }
+  .mySwiper .swiper-button-next:hover,
+  .mySwiper .swiper-button-prev:hover {
+    background: #0ea5e9;
+  }
+  .mySwiper .swiper-button-next:hover:after,
+  .mySwiper .swiper-button-prev:hover:after {
+    color: white;
+  }
+  .mySwiper .swiper-slide {
+    height: auto;
+    display: flex;
+  }
+  .mySwiper .swiper-pagination-bullet {
+    background: #0ea5e9;
+    opacity: 0.3;
+  }
+  .mySwiper .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+}
+
+/* -------------------------------------------------- */
+/* 4. Career 追記                     */
+/* -------------------------------------------------- */
+
+@theme {
+  /* ▼ 信頼感のあるカラーパレット（水色ベースに調整） */
+  --color-trust-navy: #1e3a8a;
+  --color-trust-blue: #3b82f6;
+  --color-trust-teal: #06b6d4;
+}
+
+@layer components {
+  /* 写真の上に載せる文字用の影 */
+  .text-shadow-md {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  /* モダンなカード（浮き上がる動き） */
+  .card-float {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(186, 230, 253, 0.6);
+  }
+  .card-float:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 30px -10px rgba(14, 165, 233, 0.15);
+    border-color: var(--color-trust-blue);
+  }
+}

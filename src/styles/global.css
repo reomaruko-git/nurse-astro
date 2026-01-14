@@ -9,11 +9,11 @@
   /* ▼ カスタムカラー - 水色ベースの爽やかな配色 */
 /* メインの水色 */
   --color-primary: #0ea5e9;
-  --color-primary-dark: #0284c7;
+  --color-primary-hover: #0284c7;
   
   /* ピンク系（旧レバウェルカラー箇所） */
-  --color-secondary: #EE849D;
-  --color-secondary-hover: #e36b89;
+  --color-secondary: #fc6387;
+  --color-secondary-hover: #ee3560;
   
   /* その他、既存のオレンジなども汎用名に変更 */
   --color-accent-orange: #f97316;

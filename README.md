@@ -1,44 +1,43 @@
-# 💊 薬剤師 Support.com LP Project
+# 🩺 看護師 Support.com LP Project
 
-このプロジェクトは「看護師 Support.com」のランディングページ（LP）構築用リポジトリです。
-**Astro v5** と **Tailwind CSS v4** を使用して構築されており、高速なパフォーマンスとメンテナンス性を重視しています。
+このプロジェクトは、看護師転職市場で利益を最大化するための比較型LP**「看護師 Support.com」**のリポジトリです。
+**Astro v5** と **Tailwind CSS v4** を採用し、広告運用（PPC）において最重要指標である「ページ表示速度（LCP）」と「成約率（CVR）」を極限まで追求した設計になっています。
 
 ## 🛠 技術スタック
 
-- **Framework**: [Astro](https://astro.build) (v5)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (v4) - `@tailwindcss/vite` プラグイン使用
-- **UI Library**: [Swiper](https://swiperjs.com/) (カルーセルスライダー)
-- **Deployment**: **Netlify (Git 連携による自動デプロイ)**
+- **Framework**: [Astro](https://astro.build) (v5) - 静的生成(SSG)による爆速表示
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (v4) - メンテナンス性の高いスタイリング
+- **UI Library**: [Swiper](https://swiperjs.com/) (求人スライダー・口コミ用)
+- **Infrastructure**: **Mixhost (Litespeed Web Server)**
+- **Deployment**: **手動ビルド ➔ FTPアップロード**
 
-## 📚 運用マニュアル
+## 📚 運用・戦略マニュアル
 
-サイトの更新手順やトラブルシューティングは、以下の Google ドキュメントにまとめています。
-作業前に必ずご一読ください。
+サイトの更新手順やPPC運用のレギュレーションについては、以下のドキュメントを確認してください。
+特に**「案件の提携解除」を防ぐためのPR表記**や**正確な求人数データ**の更新日は、広告出稿前に必ずチェックすること。
 
-- [📖 薬剤師 Support.com サイト運用・更新マニュアル](https://docs.google.com/document/d/1761VuldyVFLAbxw-2aAhH5MqzTOqLrkCzKRAYDTKdCM/edit?usp=sharing)
+- [📖 看護師 Support.com サイト運用・更新マニュアル]()
 
 ## 🚀 プロジェクト構造
 
-主要なファイルとフォルダの構成です。
+PPCのABテスト（訴求文やボタン色の変更）を行う際は、主に `src/pages/index.astro` を編集します。
 
 ```text
 /
 ├── public/
 │   └── assets/
-│       └── images/      # 🖼️ 画像ファイルはここに格納（パスは /assets/images/...）
+│       └── images/      # 🖼️ 画像ファイル（WebP形式を強く推奨）
 ├── src/
 │   ├── layouts/
-│   │   └── Layout.astro # 📐 共通レイアウト（ヘッダー、フッター、<head>設定）
+│   │   └── Layout.astro # 📐 共通レイアウト（GTM/タグマネージャーはここ）
 │   ├── pages/
-│   │   ├── index.astro  # 🏠 LPトップページ（メインコンテンツ）
+│   │   ├── index.astro  # 🏠 LPメインコンテンツ（比較表・ボタンの修正はここ）
 │   │   ├── company.astro
 │   │   └── privacy.astro
 │   └── styles/
-│       └── global.css   # 🎨 Tailwind v4設定・共通スタイル（@theme等はここ）
-├── astro.config.mjs     # ⚙️ Astro設定（Viteプラグイン、ビルド出力設定、ショートリンク設定）
-├── dist/                # 📦 ビルド生成物（この中身をサーバーにアップロード）
+│       └── global.css   # 🎨 Tailwind v4設定（ブランドカラーはここ）
+├── astro.config.mjs     # ⚙️ Astro設定
 └── package.json
-```
 
 ## 🧞 コマンド一覧
 
@@ -51,40 +50,27 @@
 | `npm run build`   | **本番用ビルド**。`dist/` フォルダに公開用ファイルを生成します。                   |
 | `npm run preview` | ビルドされた `dist/` の内容をローカルで確認します。                                |
 
-## 📦 デプロイ手順（Netlify へ自動本番化）
+## 📦 デプロイ手順
 
-このプロジェクトは、Git リポジトリ（GitHub など）と Netlify が連携した**継続的デプロイ（Continuous Deployment: CD）**により運用されています。
+MixhostはGit連携による自動デプロイではないため、以下の手順で手動反映を行います。
 
-サイトを更新する手順は非常にシンプルです。
-ローカルでコードを変更する
-必要な修正をローカルファイルに対して行います。
-変更を Git でコミットし、リモートリポジトリにプッシュする
+本番ビルドの実行: ターミナルで npm run build を実行します。
 
-git add .
-git commit -m "feat: [コミットメッセージを記述]"
-git push origin main
+アップロードファイルの確認: 生成された dist/ フォルダの中身が最新であることを確認します。
 
-プッシュ後、Netlify が自動で変更を検知し、ビルド（npm run build）とデプロイを数分で完了させます。
+FTPアップロード: FileZilla等のFTPソフトまたはMixhostのcPanel内「ファイルマネージャー」を使用し、dist/ 内の全ファイルを公開ディレクトリ（public_html/等）へアップロードします。
 
-✅ 注意:
-デプロイ状況は Netlify のダッシュボードで確認できます。
-SFTP や手動でのファイルアップロードは一切不要です。 必ず Git プッシュで更新を行ってください。
+[!IMPORTANT] キャッシュクリアについて Mixhost（LiteSpeedサーバー）はキャッシュが強力です。アップロード後は、cPanelから「LiteSpeed Web Cache Manager」を開き、必ず**Flush LSCache（全キャッシュクリア）**を実行してください。修正が反映されない原因の9割はこれです。
 
-## 🎨 スタイル編集について (Tailwind CSS v4)
+📝 運用メモ
+画像パス: 必ず /assets/images/filename の形式で記述。
 
-このプロジェクトは **Tailwind CSS v4** を使用しています。
-従来の設定ファイル（`tailwind.config.js`）は使用せず、CSS ファイル内で直接設定を行っています。
+広告計測: CVタグやGTMは Layout.astro の <head> 内に設置済み。
 
-- **テーマ設定（色・フォント）**: `src/styles/global.css` 内の `@theme` ブロックを編集してください。
-- **CSS の適用**: `src/layouts/Layout.astro` で `import '../styles/global.css';` しています。
+モバイルファースト: 看護師ユーザーの9割はスマホ閲覧です。開発時は常にデベロッパーツールでSP表示を基準に調整してください。
 
-## 📝 運用メモ
-
-- **カルーセル**: Swiper.js を使用。設定は `index.astro` 最下部の `<script>` タグ内に記述されています。
-  - _注意: `loopAdditionalSlides` 設定はバグの原因になるため使用しないでください。_
-- **画像パス**: 必ず `/assets/images/ファイル名` の形式で記述してください。
-- **PC/スマホ表示**: Tailwind の `md:` プレフィックス（例: `md:flex`）でレスポンシブ制御を行っています。
+損切り基準: 25クリックされて1件も発生（CV）しない場合は、LPのFV（ファーストビュー）訴求の変更を検討すること。
 
 ---
 
-© 2025 Yakuzaishi Support.com. All Rights Reserved.
+© 2026 看護師 Support.com. All Rights Reserved.

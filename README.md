@@ -38,6 +38,7 @@ PPCのABテスト（訴求文やボタン色の変更）を行う際は、主に
 │       └── global.css   # 🎨 Tailwind v4設定（ブランドカラーはここ）
 ├── astro.config.mjs     # ⚙️ Astro設定
 └── package.json
+```
 
 ## 🧞 コマンド一覧
 
@@ -62,7 +63,7 @@ FTPアップロード: FileZilla等のFTPソフトまたはMixhostのcPanel内�
 
 [!IMPORTANT] キャッシュクリアについて Mixhost（LiteSpeedサーバー）はキャッシュが強力です。アップロード後は、cPanelから「LiteSpeed Web Cache Manager」を開き、必ず**Flush LSCache（全キャッシュクリア）**を実行してください。修正が反映されない原因の9割はこれです。
 
-📝 運用メモ
+## 📝 運用メモ
 画像パス: 必ず /assets/images/filename の形式で記述。
 
 広告計測: CVタグやGTMは Layout.astro の <head> 内に設置済み。
